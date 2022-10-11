@@ -25,7 +25,13 @@ class Chronometer {
   }
 
   computeTwoDigitNumber(value) {
-    
+    let string = JSON.stringify(value);
+    if (string.length === 2){
+      return string;
+    } else {
+      let paddedString = "0" + string.slice(0);
+      return paddedString;
+    }
   }
 
   stop() {
